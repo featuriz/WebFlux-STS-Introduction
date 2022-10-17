@@ -27,7 +27,7 @@ public class GreetingRouterTest {
 				.get().uri("/hello").accept(MediaType.APPLICATION_JSON).exchange()
 				// and use the dedicated DSL to test assertions against the response
 				.expectStatus().isOk().expectBody(Greeting.class).value(greeting -> {
-					assertThat(greeting.getMessage()).isEqualTo("Hello, Spring WebFlux!!");
+					assertThat(greeting.getMessage()).isEqualTo("Hello, Spring WebFlux!!!");
 				});
 	}
 }
